@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>BMI Calculator</h2>
+  <div>
+    <label for="weight">Weight (kg): </label>
+    <input type="number" [(ngModel)]="weight" id="weight" name="weight" placeholder="Enter weight">
+  </div>
+  <div>
+    <label for="height">Height (cm): </label>
+    <input type="number" [(ngModel)]="height" id="height" name="height" placeholder="Enter height">
+  </div>
+  <br>
+  <br>
+  <button (click)="calculateBMI()">Calculate</button>
+  <div *ngIf="bmi">
+    <h3>Your BMI: {{ bmi. toFixed(2) }}</h3>
+    <h3>Your BMI Category: {{ bmiCategory }}</h3>
+  </div>
+</div>
